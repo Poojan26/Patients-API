@@ -165,18 +165,46 @@ server.post('/patients/:id/tests', function (req, res, next) {
   })
 })
 
-// // Delete user with the given id
-// server.del('/users/:id', function (req, res, next) {
+// Delete all patients
+server.del('/patients', function (req, res, next) {
 
-//   // Delete the user with the persistence engine
-//   usersSave.delete(req.params.id, function (error, user) {
+  // Delete the patient with the persistence engine
+  patientsSave.deleteMany(req.params, function (error, patients) {
 
-//     // If there are any errors, pass them to next in the correct format
-//     if (error) return next(new restify.InvalidArgumentError(JSON.stringify(error.errors)))
+    // If there are any errors, pass them to next in the correct format
+    if (error) return next(new restify.InvalidArgumentError(JSON.stringify(error.errors)))
 
-//     // Send a 200 OK response
-//     res.send()
-//   })
-// })
+    // Send a 200 OK response
+    res.send()
+  })
+})
+
+// Delete patient with the given id
+server.del('/patients/:id', function (req, res, next) {
+
+  // Delete the patient with the persistence engine
+  patientsSave.delete(req.params.id, function (error, patients) {
+
+    // If there are any errors, pass them to next in the correct format
+    if (error) return next(new restify.InvalidArgumentError(JSON.stringify(error.errors)))
+
+    // Send a 200 OK response
+    res.send()
+  })
+})
+
+// Delete all tests of current patient
+server.del('/patients/:id/tests', function (req, res, next) {
+
+  // Delete the patient with the persistence engine
+  testsSave.deleteMany({patient_id:req.params.id}, function (error, tests) {
+
+    // If there are any errors, pass them to next in the correct format
+    if (error) return next(new restify.InvalidArgumentError(JSON.stringify(error.errors)))
+
+    // Send a 200 OK response
+    res.send()
+  })
+})
 
 
