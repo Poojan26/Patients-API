@@ -1,3 +1,10 @@
+/* Group - 2 
+   Milestone - 2 
+   Course - MAPD-713 (Enterprise Techs)
+   Group Members: Poojan Patel [301228811]
+                  Matthew Maxwell [301200258]
+                  Sanjeevan Pushparaj [301213104]  */
+
 var SERVER_NAME = 'patients-api'
 var PORT = 5000;
 var HOST = '127.0.0.1';
