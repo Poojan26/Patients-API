@@ -3,11 +3,11 @@
     "version": "1.0.0",
     "description": "REST API - Patients",
     "dependencies": {
+        "heroku": "^7.59.1",
         "restify": "4.1.1",
-		"save": "2.3.0"
-
+        "save": "2.3.0"
     },
     "author": "Group-2",
-	"private": true,
-	"main": "index.js"
+    "private": true,
+    "main": "index.js"
 }

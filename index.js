@@ -1,5 +1,5 @@
 /* Group - 2 
-   Milestone - 2 
+   Milestone - 3 (Hosting on Heroku app)
    Course - MAPD-713 (Enterprise Techs)
    Group Members: Poojan Patel [301228811]
                   Matthew Maxwell [301200258]
@@ -8,7 +8,6 @@
 var SERVER_NAME = 'patients-api'
 var PORT = 5000;
 var HOST = '127.0.0.1';
-
 
 var restify = require('restify')
 
