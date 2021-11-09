@@ -8,7 +8,8 @@
         "save": "2.3.0"
     },
     "engines":{
-        "node": "16.9.0"
+        "node": "16.9.0",
+        "npm": "7.21.1"
     },
     "author": "Group-2",
     "private": true,
