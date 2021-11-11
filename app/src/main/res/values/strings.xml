@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Patient-rest-api</string>
+    <string name="patient_api">Patient API</string>
+    <string name="get_patient_data">Get patient data</string>
+    <string name="create_a_new_record">Create a new record</string>
+    <string name="create_a_new_patient">Create a new patient</string>
+    <string name="first_name">First Name:</string>
+    <string name="last_name">Last name:</string>
+    <string name="address">Address:</string>
+    <string name="date_of_birth">Date of birth:</string>
+    <string name="department">Department:</string>
+    <string name="doctor">Doctor:</string>
+    <string name="send">Send</string>
+    <string name="patient_record_created">Patient Record:</string>
+</resources>
