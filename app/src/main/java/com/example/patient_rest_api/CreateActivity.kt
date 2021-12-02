@@ -1,7 +1,7 @@
 package com.example.patient_rest_api
 /*
 Group-2
-Milestone-3
+Milestone-4
     Poojan Jitendrakumar Patel [301228811]
     Matthew Maxwell [301200258]
     Sanjeevan Pushparaj [301213104]
@@ -41,6 +41,7 @@ class CreateActivity : AppCompatActivity() {
             val queue = Volley.newRequestQueue(this)
             val url = "https://patient-rest-api.herokuapp.com/patients"
             val textView = findViewById<TextView>(R.id.details)
+            val ide = findViewById<TextView>(R.id.ide)
 
             // Post parameters
             val params = HashMap<String, String>()
@@ -59,11 +60,31 @@ class CreateActivity : AppCompatActivity() {
                 Response.Listener { response ->
                     // Display the first 500 characters of the response string.
                     textView.text = "Response: %s".format(response.toString())
+                    ide.text = response.get("_id").toString()
+
+
                 },
                 Response.ErrorListener { textView.text = "That didn't work!" })
 
             // Add the request to the RequestQueue.
             queue.add(request)
+
+            var patient_id = findViewById<TextView>(R.id.ide).text.toString()
+
+
+            // Create an intent object
+            val intent = Intent(this@CreateActivity, DisplayActivity::class.java)
+            intent.putExtra("fname",name)
+            intent.putExtra("lname",lastname)
+            intent.putExtra("address",address)
+            intent.putExtra("dob",dob)
+            intent.putExtra("deoartment",department)
+            intent.putExtra("doctor",doctor)
+            intent.putExtra("id",patient_id)
+
+
+            // Start Subactivity
+            startActivity(intent)
 
         }
     }

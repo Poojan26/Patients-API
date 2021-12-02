@@ -1,7 +1,7 @@
 package com.example.patient_rest_api
 /*
 Group-2
-Milestone-3
+Milestone-4
     Poojan Jitendrakumar Patel [301228811]
     Matthew Maxwell [301200258]
     Sanjeevan Pushparaj [301213104]
@@ -58,4 +58,18 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    // Get patient by id
+    fun btngetid(view: android.view.View) {
+
+        if (view.id == R.id.btngetid) {
+            // Create an intent object
+            val intent = Intent(this@MainActivity, SearchActivity::class.java)
+
+            // Start Subactivity
+            startActivity(intent)
+        }
+
+    }
+
 }
